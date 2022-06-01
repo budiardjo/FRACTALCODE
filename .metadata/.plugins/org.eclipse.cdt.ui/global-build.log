@@ -51,3 +51,154 @@ In file included from ..\src\Bitmap.cpp:8:
 ..\src\Bitmap.cpp:12:74: error: class 'test::Bitmap' does not have any field named 'm_pPixels'
    12 | Bitmap::Bitmap(int width, int height): m_width(width), m_height(height), m_pPixels(new uint8_t[width*height*3]){
       |                                                                          ^~~~~~~~~
+23:58:42 **** Incremental Build of configuration Debug for project fractal ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bitmap.o" "..\\src\\Bitmap.cpp" 
+In file included from ..\src\Bitmap.cpp:8:
+..\src\Bitmap.h:15:9: error: 'unique_ptr' does not name a type
+   15 |         unique_ptr<uint8_t[]> m_pPixel{nullptr};
+      |         ^~~~~~~~~~
+..\src\Bitmap.cpp: In constructor 'test::Bitmap::Bitmap(int, int)':
+..\src\Bitmap.cpp:12:74: error: class 'test::Bitmap' does not have any field named 'm_pPixels'
+   12 | Bitmap::Bitmap(int width, int height): m_width(width), m_height(height), m_pPixels(new uint8_t[width*height*3]()){
+      |                                                                          ^~~~~~~~~
+00:04:22 **** Incremental Build of configuration Debug for project fractal ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bitmap.o" "..\\src\\Bitmap.cpp" 
+..\src\Bitmap.cpp: In constructor 'test::Bitmap::Bitmap(int, int)':
+..\src\Bitmap.cpp:12:74: error: class 'test::Bitmap' does not have any field named 'm_pPixels'
+   12 | Bitmap::Bitmap(int width, int height): m_width(width), m_height(height), m_pPixels(new uint8_t[width*height*3]){
+      |                                                                          ^~~~~~~~~
+00:04:34 **** Incremental Build of configuration Debug for project fractal ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bitmap.o" "..\\src\\Bitmap.cpp" 
+..\src\Bitmap.cpp: In constructor 'test::Bitmap::Bitmap(int, int)':
+..\src\Bitmap.cpp:12:74: error: class 'test::Bitmap' does not have any field named 'm_pPixels'
+   12 | Bitmap::Bitmap(int width, int height): m_width(width), m_height(height), m_pPixels(new uint8_t[width*height*3]){
+      |                                                                          ^~~~~~~~~
+00:06:37 **** Incremental Build of configuration Debug for project fractal ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bitmap.o" "..\\src\\Bitmap.cpp" 
+..\src\Bitmap.cpp: In constructor 'test::Bitmap::Bitmap(int, int)':
+..\src\Bitmap.cpp:12:74: error: class 'test::Bitmap' does not have any field named 'm_pPixels'
+   12 | Bitmap::Bitmap(int width, int height): m_width(width), m_height(height), m_pPixels(new uint8_t[width*height*3])  {
+      |                                                                          ^~~~~~~~~
+00:16:40 **** Incremental Build of configuration Debug for project fractal ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bitmap.o" "..\\src\\Bitmap.cpp" 
+..\src\Bitmap.cpp: In constructor 'test::Bitmap::Bitmap(int, int)':
+..\src\Bitmap.cpp:12:51: error: class 'test::Bitmap' does not have any field named 'm_pPixels'
+   12 |                 m_width(width), m_height(height), m_pPixels(
+      |                                                   ^~~~~~~~~
+..\src\Bitmap.cpp: In member function 'bool test::Bitmap::write(std::string)':
+..\src\Bitmap.cpp:38:28: error: 'm_pPixels' was not declared in this scope; did you mean 'm_pPixel'?
+   38 |         file.write((char *)m_pPixels.get(), m_width*m_height*3);
+      |                            ^~~~~~~~~
+      |                            m_pPixel
+00:17:07 **** Incremental Build of configuration Debug for project fractal ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bitmap.o" "..\\src\\Bitmap.cpp" 
+..\src\Bitmap.cpp: In member function 'bool test::Bitmap::write(std::string)':
+..\src\Bitmap.cpp:38:28: error: 'm_pPixels' was not declared in this scope; did you mean 'm_pPixel'?
+   38 |         file.write((char *)m_pPixels.get(), m_width*m_height*3);
+      |                            ^~~~~~~~~
+      |                            m_pPixel
+00:17:32 **** Incremental Build of configuration Debug for project fractal ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bitmap.o" "..\\src\\Bitmap.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
+g++ -o fractal.exe "src\\Bitmap.o" "src\\main.o" 
+Info: Nothing to build for fractal
+00:26:20 **** Incremental Build of configuration Debug for project fractal ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bitmap.o" "..\\src\\Bitmap.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
+g++ -o fractal.exe "src\\Bitmap.o" "src\\main.o" 
+Info: Nothing to build for fractal
+00:37:58 **** Incremental Build of configuration Debug for project fractal ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Mandelbrot.o" "..\\src\\Mandelbrot.cpp" 
+..\src\Mandelbrot.cpp: In static member function 'static int test::Mandelbrot::getIterations(double, double)':
+..\src\Mandelbrot.cpp:24:9: error: 'complex' was not declared in this scope; did you mean 'std::complex'?
+   24 |         complex<double> z = 0;
+      |         ^~~~~~~
+      |         std::complex
+In file included from ..\src\Mandelbrot.cpp:9:
+C:/msys64/mingw64/include/c++/12.1.0/complex:67:32: note: 'std::complex' declared here
+   67 |   template<typename _Tp> class complex;
+      |                                ^~~~~~~
+..\src\Mandelbrot.cpp:24:17: error: expected primary-expression before 'double'
+   24 |         complex<double> z = 0;
+      |                 ^~~~~~
+..\src\Mandelbrot.cpp:25:17: error: expected primary-expression before 'double'
+   25 |         complex<double> c(x, y);
+      |                 ^~~~~~
+..\src\Mandelbrot.cpp:30:17: error: 'z' was not declared in this scope
+   30 |                 z = z*z + c;
+      |                 ^
+..\src\Mandelbrot.cpp:30:27: error: 'c' was not declared in this scope
+   30 |                 z = z*z + c;
+      |                           ^
+00:38:25 **** Incremental Build of configuration Debug for project fractal ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Mandelbrot.o" "..\\src\\Mandelbrot.cpp" 
+..\src\Mandelbrot.cpp: In static member function 'static int test::Mandelbrot::getIterations(double, double)':
+..\src\Mandelbrot.cpp:24:9: error: 'complex' was not declared in this scope; did you mean 'std::complex'?
+   24 |         complex<double> z = 0;
+      |         ^~~~~~~
+      |         std::complex
+In file included from ..\src\Mandelbrot.cpp:9:
+C:/msys64/mingw64/include/c++/12.1.0/complex:67:32: note: 'std::complex' declared here
+   67 |   template<typename _Tp> class complex;
+      |                                ^~~~~~~
+..\src\Mandelbrot.cpp:24:17: error: expected primary-expression before 'double'
+   24 |         complex<double> z = 0;
+      |                 ^~~~~~
+..\src\Mandelbrot.cpp:25:17: error: expected primary-expression before 'double'
+   25 |         complex<double> c(x, y);
+      |                 ^~~~~~
+..\src\Mandelbrot.cpp:30:17: error: 'z' was not declared in this scope
+   30 |                 z = z*z + c;
+      |                 ^
+..\src\Mandelbrot.cpp:30:27: error: 'c' was not declared in this scope
+   30 |                 z = z*z + c;
+      |                           ^
+00:39:39 **** Incremental Build of configuration Debug for project fractal ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Mandelbrot.o" "..\\src\\Mandelbrot.cpp" 
+g++ -o fractal.exe "src\\Bitmap.o" "src\\Mandelbrot.o" "src\\main.o" 
+Info: Nothing to build for fractal
+Info: Nothing to build for fractal
+00:41:06 **** Incremental Build of configuration Debug for project fractal ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
+g++ -o fractal.exe "src\\Bitmap.o" "src\\Mandelbrot.o" "src\\main.o" 
+Info: Nothing to build for fractal
+00:44:07 **** Incremental Build of configuration Debug for project fractal ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
+g++ -o fractal.exe "src\\Bitmap.o" "src\\Mandelbrot.o" "src\\main.o" 
+Info: Nothing to build for fractal
+Info: Nothing to build for fractal
+Info: Nothing to build for fractal
+00:48:28 **** Incremental Build of configuration Debug for project fractal ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
+g++ -o fractal.exe "src\\Bitmap.o" "src\\Mandelbrot.o" "src\\main.o" 
+Info: Nothing to build for fractal
+Info: Nothing to build for fractal
+00:59:05 **** Incremental Build of configuration Debug for project fractal ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ZoomList.o" "..\\src\\ZoomList.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
+..\src\main.cpp: In function 'int main()':
+..\src\main.cpp:19:16: warning: unused variable 'min' [-Wunused-variable]
+   19 |         double min = 999999;
+      |                ^~~
+..\src\main.cpp:20:16: warning: unused variable 'max' [-Wunused-variable]
+   20 |         double max = -999999;
+      |                ^~~
+g++ -o fractal.exe "src\\Bitmap.o" "src\\Mandelbrot.o" "src\\ZoomList.o" "src\\main.o" 
+Info: Nothing to build for fractal
+Info: Nothing to build for fractal
