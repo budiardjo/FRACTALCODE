@@ -1,1 +1,14 @@
-Info: Nothing to build for fractal
+20:46:49 **** Incremental Build of configuration Debug for project fractal ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Bitmap.o" "..\\src\\Bitmap.cpp" 
+In file included from ..\src\Bitmap.cpp:8:
+..\src\Bitmap.h:15:2: error: 'unique_ptr' does not name a type
+   15 |  unique_ptr<uint8_t[]> m_pPixel{nullptr};
+      |  ^~~~~~~~~~
+..\src\Bitmap.cpp: In constructor 'test::Bitmap::Bitmap(int, int)':
+..\src\Bitmap.cpp:12:74: error: class 'test::Bitmap' does not have any field named 'm_pPixels'
+   12 | Bitmap::Bitmap(int width, int height): m_width(width), m_height(height), m_pPixels(new uint8_t[width*height*3]){
+      |                                                                          ^~~~~~~~~
+
+20:46:50 Build Failed. 2 errors, 0 warnings. (took 689ms)
+
