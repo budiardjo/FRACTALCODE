@@ -1,0 +1,1 @@
+![My Image](test.bmp)
